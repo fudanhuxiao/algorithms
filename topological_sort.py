@@ -27,4 +27,8 @@ def topological_sort(vertices, edges):
                   indegree[child] -= 1
                   if indegree[child] == 0:
                         sources.append(child)
+
+      # 5. determine if the graph has a cycle
+      if len(sortedOrder) != vertices:
+            return []
       return sortedOrder
